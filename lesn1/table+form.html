@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Форма с таблицей</title>
+   <style>
+      .wrapper {width: 800px; margin: 0 auto;}
+      table {margin: 0 auto;}
+      .classedForm {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+      }
+   </style>
+</head>
+<body>
+   <div class="wrapper">
+      <form>
+         <fieldset>
+            <legend>Таблица</legend>
+            <table>
+               <caption>Введите данные в ячейки</caption>
+               <thead></thead>
+               <tbody>
+                  <tr>
+                     <td>
+                        <input type="text" placeholder="Ячейка 1" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 2" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 3" maxlength="20">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="text" placeholder="Ячейка 4" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 5" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 6" maxlength="20">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="text" placeholder="Ячейка 7" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 8" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка 9" maxlength="20">
+                     </td>
+                  </tr>
+               </tbody>
+               <tfoot>
+                  <tr>
+                     <td>
+                        <input type="text" placeholder="Ячейка футера" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка футера" maxlength="20">
+                     </td>
+                     <td>
+                        <input type="text" placeholder="Ячейка футера" maxlength="20">
+                     </td>
+                  </tr>
+               </tfoot>
+            </table>
+         </fieldset>
+         <fieldset class="classedForm">
+            <legend>Инпуты</legend>
+            <div>
+               <p>Укажите свои данные</p>
+               <label><span>Введите ФИО: </span><input type="text"></label><br><br>
+               <label><span>Введите дату: </span><input type="date"></label><br><br>
+               <label><span>Введите почту: </span><input type="email" required></label><br><br>
+               <span>Какая это почта: </span>
+               <select name="emailType">
+                  <option value="email-personal">Личная</option>
+                  <option value="email-work">Рабочая</option>
+                  <option value="email-friend">Другана</option>
+               </select><br><br>
+               <label><span>Введите телефон: </span><input type="tel"></label>
+            </div>
+            <div>
+               <p>Выберите элементы</p>
+               <label><input type="checkbox"><span> вопрос?</span></label><br>
+               <label><input type="checkbox"><span> вопрос?</span></label><br>
+               <label><input type="checkbox"><span> вопрос?</span></label><br>
+               <label><input type="checkbox"><span> вопрос?</span></label><br>
+               <label><input type="checkbox"><span> вопрос?</span></label><br>
+               <label><input type="radio" name="radio"><span> один</span></label><br>
+               <label><input type="radio" name="radio"><span> два</span></label><br>
+               <label><input type="radio" name="radio"><span> три</span></label><br>
+               <label><input type="radio" name="radio"><span> четыре</span></label>
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>Отправить</legend>
+            <p>Расскажите о себе</p>
+            <textarea name="texa" cols="50" rows="5"></textarea>
+            <br><br>
+            <button type="reset">Стереть</button>
+            <button type="submit">Отправить</button>
+         </fieldset>
+      </form>
+   </div>
+</body>
+</html>
