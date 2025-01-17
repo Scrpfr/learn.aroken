@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Анимации</title>
+   <style>
+      .center {max-width: 1800px; margin: 0 auto;}
+      .header {width: 115px; margin: 0 auto;}
+      .pseudo {position: relative;}
+      .pseudo::before {
+         content: '';
+         position: absolute;
+         height: 30px; width: 30px;
+         background-color: #e51b1b;
+         border-radius: 50%;
+         left: -40px;
+      }
+      .pseudo::after {
+         content: '';
+         position: absolute;
+         height: 30px; width: 30px;
+         background-color: #1d63db;
+         border-radius: 50%;
+         right: -40px;
+      }
+      .list__item:nth-child(odd) {color: rgb(141, 23, 23);}
+      .list__item:nth-child(even) {color: rgb(17, 39, 136);}
+      .list__item:first-child {color: rgb(9, 104, 75);}
+      .list__item:last-child {color: rgb(9, 104, 75);}
+      .list__item:nth-child(6) {color: rgb(83, 102, 0);}
+      .list__item:first-child::before {
+         content: 'Кнопка связана с 1 элементом списка';
+         padding: 10px 16px;
+         color: black;
+         background-color: #8585e7;
+         position: absolute;
+         border-radius: 20px;
+         left: 20vw;
+         top: 150px;
+      }
+      .list__item:first-child:hover::before {background-color: #3d3dbf; color: aliceblue;}
+      .hovering {
+         position: relative;
+         width: 300px; height: 300px;
+         background-color: #1a82e9;
+         margin: 100px auto;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: all 1s ease, outline 0s 1s ease;
+      }
+      .hovering p {color: aliceblue; cursor: default;}
+      .hovering:hover {
+         background-color: #0557a9;
+         padding: 20px;
+         margin-top: 80px;
+         outline: 8px solid #41db0c;
+      }
+
+      .object {
+         width: 100px; height: 100px;
+         background-color: #8585e7;
+         position: absolute;
+         right: 24px;
+         animation: move 2s .3s infinite alternate;
+      }
+
+      @keyframes move {
+         0% {
+            top: 10px;
+         }
+         100% {
+            top: 600px;
+            transform: rotate(180deg);
+         }
+      }
+   </style>
+</head>
+<body>
+   <header class="center">
+      <div class="header">
+         <h2 class="pseudo">Заголовок</h2>
+      </div>
+   </header>
+   <main class="center">
+      <ol>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+         <li class="list__item">Элемент нумерного списка</li>
+      </ol>
+      <div class="hovering"><p>Hover</p></div>
+      <div class="object"></div>
+   </main>
+</body>
+</html>
