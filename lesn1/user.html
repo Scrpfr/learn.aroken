@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <title>юзер</title>
+</head>
+<body>
+   Работа в консоли.
+</body>
+<script>
+const users = [
+   {
+      name: 'Данил',
+      age: 25,
+      grade: 'student'
+   },
+   {
+      name: 'Анастасия',
+      age: 20,
+      grade: 'student'
+   },
+   {
+      name: 'Никита',
+      age: 23,
+      grade: 'admin'
+   },
+   {
+      name: 'Сергей',
+      age: 30,
+      grade: 'admin'
+   },
+   {
+      name: 'Марго',
+      age: 24,
+      grade: 'student'
+   },
+   {
+      name: 'Антон',
+      age: 32,
+      grade: 'admin'
+   }
+];
+
+function greeting(studentName) {
+   console.log('Hello' + ' ' + studentName)
+};
+greeting(users[0].name);
+
+let allPeoples = 0;
+let students = 0;
+
+for (i = 0; i < users.length; i++) {
+   if(users[i].grade == 'student') {students++};
+   allPeoples++;
+};
+
+console.log(`Количество обычных студентов: ${students} (из ${allPeoples} человек)`)
+</script>
+</html>
