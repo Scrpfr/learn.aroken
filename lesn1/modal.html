@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <title>Модальное окно</title>
+   <style>
+      .modal {
+         position: fixed;
+         inset: 0;
+         z-index: 2;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #100e0e99;
+         visibility: hidden;
+         opacity: 0;
+         transition: all .3s;
+      }
+      .modal__window {
+         position: relative;
+         width: 50vw;
+         min-height: 40vh;
+         padding: 20px;
+         background-color: #fff;
+         border-radius: 12px;
+         font-size: 24px;
+      }
+      .modal__close {
+         position: absolute;
+         top: 5px;
+         right: 10px;
+         width: 30px;
+         height: 30px;
+         font-size: 20px;
+         font-weight: 700;
+         background: none;
+         border: none;
+         cursor: pointer;
+      }
+      .modal--open {opacity: 1; visibility: visible;}
+   </style>
+</head>
+<body>
+   <button class="btn-open">Открыть окно</button>
+   <div class="modal">
+      <div class="modal__window">
+         <button class="modal__close">X</button>
+         <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький, семь сих реторический буквоград грамматики рукопись залетают приставка своего пунктуация силуэт если толку жаренные щеке путь до проектах эта!</p>
+      </div>
+   </div>
+</body>
+<script>
+   const btnOpen = document.querySelector('.btn-open');
+   const modal = document.querySelector('.modal');
+
+   const openModal = () => {
+      modal.classList.add('modal--open')
+   };
+
+   const closeModal = () => {
+      modal.classList.remove('modal--open')
+   };
+
+   btnOpen.addEventListener('click', openModal);
+
+   modal.addEventListener('click', event => {
+      const target = event.target;
+      if (target && target.classList.contains('modal') || target.classList.contains('modal__close')) {
+         closeModal()
+      }
+   });
+
+   document.addEventListener('keydown', event => {
+      if (event.code === 'Escape' && modal.classList.contains('modal--open')) {
+         closeModal()
+      }
+   })
+</script>
+</html>
