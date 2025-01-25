@@ -14,4 +14,24 @@
          document.body.classList.remove('body--opened-menu')
       }
    }
+
+   const modal = document.querySelector('.modal');
+   const modalButton = document.querySelector('.about__img-button');
+
+   modalButton.addEventListener('click', openmodal);
+   modal.addEventListener('click', closemodal);
+
+   function openmodal(e) {
+      e.preventDefault()
+      modal.classList.toggle('body--opened-modal')
+   }
+
+   function closemodal(e) {
+      e.preventDefault()
+      const target = e.target;
+
+      if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
+         modal.classList.remove('body--opened-modal')
+      }
+   }
 }) ()
