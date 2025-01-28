@@ -40,7 +40,8 @@
 }
 
 .main__program,
-.main__gallery {
+.main__gallery,
+.main__testimonials {
     padding-bottom: 145px;
 }
 
@@ -139,6 +140,8 @@
 .modal__text {
     margin-bottom: 30px;
 }
+
+.modal__form {}
 
 .modal__form-label {
     margin-bottom: 10px;
