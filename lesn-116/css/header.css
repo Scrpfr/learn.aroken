@@ -21,14 +21,10 @@
     width: 100%;
 }
 
-.nav {}
-
 .nav__list {
     display: flex;
     gap: 4vh 40px;
 }
-
-.nav__item {}
 
 .nav__link {
     display: block;
@@ -111,8 +107,6 @@
 .header__hero {
     padding: 50px 0 140px;
 }
-
-/* ========================================================= */
 
 .hero {
     padding: 50px 0 140px;
