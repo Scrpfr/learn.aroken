@@ -1,0 +1,41 @@
+:root {
+   --font-family: "Inter", sans-serif;
+   --second-family: "Readex Pro", sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 100px;
+}
+
+body {font-family: var(--font-family);}
+
+.container {
+   max-width: 1294px;
+   margin: 0 auto;
+}
+
+.section {margin-bottom: 80px;}
+
+.container-header {
+   font-family: var(--second-family);
+   font-size: 42px;
+   line-height: 1.25;
+   text-align: center;
+   padding-bottom: 10px;
+}
+
+.container-description {
+   font-family: var(--second-family);
+   font-size: 13px;
+   line-height: 1.29;
+   text-align: center;
+}
+
+.box {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   gap: 10px;
+}
