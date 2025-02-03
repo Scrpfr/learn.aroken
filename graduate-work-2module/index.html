@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="css/swiper-bundle.min.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
    <title>California</title>
 </head>
@@ -16,11 +17,20 @@
             <nav class="nav">
                <ul class="nav__list">
                   <li class="nav__item"><a href="#">All products</a></li>
-                  <li class="nav__item"><span class="nav__item-menu">Solutions 
+                  <li class="nav__item sub-menu"><span class="nav__item-menu">Solutions 
                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 1L6 6L1 1" stroke="#070847" stroke-width="1.5"/>
                      </svg>                  
-                  </span></li>
+                  </span>
+                  <ul class="nav__sub-list">
+                     <li class="nav__sub-item"><a href="#">Element 1</a></li>
+                     <li class="nav__sub-item"><a href="#">Element 2</a></li>
+                     <li class="nav__sub-item"><a href="#">Element 3</a></li>
+                     <li class="nav__sub-item"><a href="#">Element 4</a></li>
+                     <li class="nav__sub-item"><a href="#">Element 5</a></li>
+                     <li class="nav__sub-item"><a href="#">Element 6</a></li>
+                  </ul>
+                  </li>
                   <li class="nav__item"><a href="#">About</a></li>
                   <li class="nav__item"><a href="#">Support</a></li>
                </ul>
@@ -45,26 +55,43 @@
 
    <main>
       <div class="container">
-         <div class="topik section">
-            <div class="topik__info">
-               <h1 class="topik__header">The new phones are here take a look.</h1>
-               <p class="topik__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
-               <a href="#" class="button">Explore</a>
+         <div class="swiper section">
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide topik">
+               <div class="topik__info">
+                  <h1 class="topik__header">The new phones are here take a look.</h1>
+                  <p class="topik__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
+                  <a href="#" class="button">Explore</a>
+               </div>
+               <div class="topik__img">
+                  <img src="img/topik.png" alt="phones">
+               </div>
             </div>
-            <div class="topik__img">
-               <img src="img/topik.png" alt="phones">
+            <div class="swiper-slide topik">
+               <div class="topik__info">
+                  <h1 class="topik__header">The new phones are here take a look.</h1>
+                  <p class="topik__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
+                  <a href="#" class="button">Explore</a>
+               </div>
+               <div class="topik__img">
+                  <img src="img/topik.png" alt="phones">
+               </div>
             </div>
-            <svg class="topik__btn-left" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M13 25L1 13L13 1" stroke="#08090D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <svg class="topik__btn-right" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M1 1L13 13L1 25" stroke="#08090D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div class="topik__slides-nav">
-               <div class="topik__slide"></div>
-               <div class="topik__slide"></div>
-               <div class="topik__slide"></div>
+            <div class="swiper-slide topik">
+               <div class="topik__info">
+                  <h1 class="topik__header">The new phones are here take a look.</h1>
+                  <p class="topik__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
+                  <a href="#" class="button">Explore</a>
+               </div>
+               <div class="topik__img">
+                  <img src="img/topik.png" alt="phones">
+               </div>
             </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
          </div>
          <div class="shop section">
             <h2 class="container-header">Shop our latest offers and categories</h2>
@@ -313,33 +340,7 @@
             </p>
          </div>
    </footer>
-   <script>
-      (function () {
-         document.addEventListener('click', burgerInit)
-         function burgerInit(e) {
-         const burgerIcon = e.target.closest('.burger-icon')
-         const burgerNavLink = e.target.closest('.nav__link')
-         if (!burgerIcon && !burgerNavLink) return
-         if (document.documentElement.clientWidth > 900) return
-         if (!document.body.classList.contains('body--opened-menu')) {
-            document.body.classList.add('body--opened-menu')
-         } else {
-            document.body.classList.remove('body--opened-menu')
-         }
-}}) ()
-
-
-
-      const search = document.querySelector('.search__input');
-      const variant = document.querySelector('.search__form-variants');
-
-      variant.addEventListener('click', select);
-      function select(e) {
-         if (e.target.tagName == 'LI') {
-            search.value = e.target.textContent;
-         }
-         else {}
-      }
-   </script>
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>

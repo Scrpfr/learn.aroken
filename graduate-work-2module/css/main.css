@@ -34,27 +34,8 @@
    padding-bottom: 24px;
 }
 
-.topik__btn-left, .topik__btn-right {
-   position: absolute;
-   top: 50%;
-   cursor: pointer;
-}
-.topik__btn-left {left: 2vw;}
-.topik__btn-right {right: 2vw;}
-
-.topik__slides-nav {
-   width: 700px;
-   position: absolute;
-   bottom: 30px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-}
-
-.topik__slide {
-   width: 200px;
-   border-bottom: 2px solid black;
-}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {bottom: 40px;}
+.swiper-button-next, .swiper-button-prev {color: black;}
 
 .shop__content {
    display: grid;
